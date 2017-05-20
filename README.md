@@ -4,7 +4,20 @@
 
 ##### Prerequisites
 
-Install [polymer-cli](https://github.com/Polymer/polymer-cli):
-(Need at least npm v0.3.0)
+[Download and install Node.js.](https://nodejs.org/en/download/)
 
-    npm install -g polymer-cli
+Install [polymer-cli](https://github.com/Polymer/polymer-cli):
+
+    $ npm install -g polymer-cli
+
+Install [bower](https://bower.io/):
+
+    $ npm install -g bower
+
+##### Setup
+
+    $ npm install
+
+### Start the development server
+
+    $ npm start
