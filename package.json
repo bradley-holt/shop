@@ -1,0 +1,22 @@
+{
+  "name": "shop",
+  "version": "1.1.2",
+  "description": "### Setup",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradley-holt/shop.git"
+  },
+  "author": "Bradley Holt <bradley.holt@us.ibm.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/bradley-holt/shop/issues"
+  },
+  "homepage": "https://github.com/bradley-holt/shop#readme"
+}
