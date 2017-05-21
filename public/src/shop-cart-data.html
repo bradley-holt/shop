@@ -9,13 +9,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 <link rel="import" href="hoodie.html">
 
 <dom-module id="shop-cart-data">
 
   <template>
-    <app-localstorage-document key="shop-cart-data" data="{{cart}}"></app-localstorage-document>
   </template>
 
   <script>
@@ -46,6 +44,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           notify: true
         }
 
+      },
+
+      observers: [
+        "_cartUpdated(cart.splices)"
+      ],
+
+      _cartDoc: {
+        _id: "cart",
+        items: [],
+      },
+
+      ready: function() {
+        var shopCartData = this;
+        // TODO: This approach is necessarily because of hoodiehq/hoodie-client#146 (https://github.com/hoodiehq/hoodie-client/issues/146)
+        hoodie.store.db.__proto__.on("created", function(db) {
+          if ("store" == db.name) {
+            // Listen for PouchDB changes for the "cart" document
+            hoodie.store.db.changes({
+              live: true,
+              include_docs: true,
+              doc_ids: [ shopCartData._cartDoc._id ],
+              return_docs: false
+            }).on("change", function(change) {
+              var doc = change.doc;
+              // Copy document data into cart and _cartDoc
+              shopCartData.cart = doc.items;
+              shopCartData._cartDoc = doc;
+            });
+          }
+        })
+        hoodie.account.hook.after("signout", function() {
+          // Reset cart and _cartDoc
+          shopCartData.cart = [];
+          shopCartData._cartDoc = {
+            _id: "cart"
+          };
+        });
+        hoodie.store.findOrAdd(this._cartDoc).then(function(doc) {
+          if (doc) {
+            shopCartData.cart = doc.items;
+            shopCartData._cartDoc = doc;
+          }
+        });
       },
 
       addItem: function(detail) {
@@ -109,6 +150,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         return -1;
+      },
+
+      _cartUpdated: function() {
+        if (!this._cartDoc._rev) {
+          // Skip if document is not already in Hoodie store
+          return;
+        }
+        var shopCartData = this;
+        hoodie.store.find(this._cartDoc._id).then(function(doc) {
+          // TODO: Compare cart items without using JSON.stringify
+          if (JSON.stringify(shopCartData.cart) != JSON.stringify(doc.items)) {
+            // Update Hoodie store from cart via _cartDoc
+            doc.items = shopCartData.cart;
+            return hoodie.store.update(doc);
+          }
+        }).then(function(doc) {
+          if (doc) {
+            shopCartData._cartDoc = doc;
+          }
+        });
       }
 
     });

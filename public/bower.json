@@ -9,7 +9,6 @@
     "polymer": "polymer/polymer#^1.4.0",
     "app-layout": "polymerelements/app-layout#^0.10.0",
     "app-route": "polymerelements/app-route#^0.9.1",
-    "app-storage": "polymerelements/app-storage#^0.9.6",
     "iron-flex-layout": "polymerelements/iron-flex-layout#^1.0.0",
     "iron-form": "polymerelements/iron-form#^1.0.0",
     "iron-icon": "polymerelements/iron-icon#^1.0.0",
