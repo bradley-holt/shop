@@ -1,0 +1,83 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="hoodie.html">
+
+<dom-module id="hoodie-account">
+
+  <template>
+
+    <div>
+      <div hidden$="[[_signedIn]]">
+        <span name="sign-up" ><a href="/sign-up">Sign Up</a></span>
+        |
+        <span name="sign-in"><a href="/sign-in">Sign In</a></span>
+      </div>
+      <div hidden$="[[!_signedIn]]">
+        <span>[[_username]]</span>
+        |
+        <span name="sign-out"><a on-tap="_signOut" href>Sign Out</a></span>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'hoodie-account',
+
+      properties: {
+
+        _signedIn: {
+          type: Boolean,
+          value: function() {
+            return false;
+          },
+          notify: true
+        },
+
+        _username: {
+          type: String,
+          notify: true
+        }
+      },
+
+      ready: function() {
+        var hoodieAccount = this;
+        hoodie.connectionStatus.check().then(function() {
+          hoodie.account.get().then(function(accountProperties) {
+            if (accountProperties.session) {
+              hoodieAccount._update(accountProperties.username);
+            }
+          });
+        });
+        hoodie.account.hook.after('signin', function(accountProperties) {
+          hoodieAccount._update(accountProperties.username);
+        });
+        hoodie.account.hook.after('signout', function() {
+          hoodieAccount._reset();
+        });
+        hoodie.account.hook.after('unauthenticate', function() {
+          hoodieAccount._reset();
+        });
+      },
+
+      _update: function(username) {
+        this._signedIn = true;
+        this._username = username;
+      },
+
+      _reset: function() {
+        this._signedIn = false;
+        this._username = undefined;
+      },
+
+      _signOut: function() {
+        hoodie.account.signOut();
+      }
+
+    });
+
+  </script>
+
+</dom-module>
