@@ -271,7 +271,7 @@ $ npm start
 Stop server with control + c
 ```
 
-Open your web browser and go to `http://localhost:8080/hoodie/admin/`. Login with the username "admin" and the password you set in `.hoodierc`. Your app currently has no users, but once a user signs up you could view or edit user accounts here in the Hoodie admin dashboard.
+Open your web browser and go to `http://localhost:8080/hoodie/admin/`. Login with password you set in `.hoodierc`. Your app currently has no users, but once a user signs up you could view or edit user accounts here in the Hoodie admin dashboard.
 
 Close the browser tab containing the Hoodie welcome screen. Back in your terminal, use `Ctrl-C` to cancel the `npm start` command and return you to the command prompt.
 
