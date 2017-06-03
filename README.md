@@ -133,6 +133,8 @@ keywords:
 license: (ISC) BSD-3-Clause
 ```
 
+**Note:** You may also be prompted to enter a value for the `author` option if you have not yet [set your npm init defaults](http://iamsim.me/set-your-npm-init-defaults/).
+
 The parenthesis indicate the default options that were provided to me when I ran `npm init`. Most (if not all) of these options will have no impact on the successful completion of this tutorial. The most important consideration is ensuring that the `entry point` option is _not_ set to the default `service-worker.js` value but rather to `index.js`.
 
 Take a look at my [`package.json`](https://github.com/bradley-holt/shop/commit/bef280159280e35e53d8c4ccb6c309755f2da8d2#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) file that was generated after running `npm init` for reference and compare it against your newly-generated `package.json` file.
