@@ -30,6 +30,7 @@ This app is a fork of the [Polymer Shop app](https://github.com/Polymer/shop). S
 
 ### Table of Contents
 
+* Prerequisite Knowledge & Skills
 * Key Concepts&nbsp;&nbsp;💡
 * Initial Set Up&nbsp;&nbsp;⌨
 * Install Hoodie ([diff](https://github.com/bradley-holt/shop/compare/upstream...bradley-holt:01-install-hoodie))&nbsp;&nbsp;🐶
@@ -39,6 +40,13 @@ This app is a fork of the [Polymer Shop app](https://github.com/Polymer/shop). S
 * Hoodie Account API ([diff](https://github.com/bradley-holt/shop/compare/03-hoodie-store...bradley-holt:04-hoodie-account))&nbsp;&nbsp;🐶 👤
 * Offline Sync&nbsp;&nbsp;🐶 🔄
 * What's next?&nbsp;&nbsp;🤔
+
+### Prerequisite Knowledge & Skills
+
+* Ability to write JavaScript at a novice level, at minimum.
+* A basic understanding of [JavaScript promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html).
+* A basic understanding of HTML.
+* Ability to work with an application programming interface (API).
 
 ### Key Concepts&nbsp;&nbsp;💡
 
@@ -55,6 +63,15 @@ Some key concepts to understand before we get started:
 * **[Apache CouchDB](http://couchdb.apache.org/):** An open source document database featuring an HTTP API, JSON documents, clustering capabilities for horizontal scalability, and *peer-to-peer replication*.
 * **[IBM Cloudant](https://cloudant.com/):** A fully-managed database-as-a-service (DBaaS) *based on Apache CouchDB* with additional full text and geospatial search capabilities
 * **[Hoodie](http://hood.ie/):** An open source *backend framework for Offline First applications*, leveraging Apache CouchDB on the server and PouchDB on the client
+
+#### Workshop Outline
+
+1. Install and run the Polymer Shop app.
+2. Install Hoodie.
+3. Configure Hoodie, optionally using Apache CouchDB or IBM Cloudant.
+4. Replace IndexedDB with the Hoodie store, which is a wrapper for PouchDB.
+5. Integrate with the Hoodie account API, allowing users to sign up, sign in, and sign out.
+6. Demonstrate the offline sync capabilities of Hoodie and PouchDB.
 
 ### Initial Set Up&nbsp;&nbsp;⌨
 
