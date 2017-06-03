@@ -139,7 +139,7 @@ Take a look at my [`package.json`](https://github.com/bradley-holt/shop/commit/b
 
 **Note:** When viewing and editing files, you will want to use a text editor such as [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/).
 
-Next you may want to add `node_modules` to your `.gitignore` file. See the diff for my [`.gitignore`](https://github.com/bradley-holt/shop/commit/bb6b4a54657953d3250da882e96ad8054ee773bd#diff-a084b794bc0759e7a6b77810e01874f2) file after this step for reference.
+Next you may want to add `node_modules` to your `.gitignore` file. See the [diff for my `.gitignore` file](https://github.com/bradley-holt/shop/commit/bb6b4a54657953d3250da882e96ad8054ee773bd#diff-a084b794bc0759e7a6b77810e01874f2) after this step for reference.
 
 Next we will install Hoodie through npm (the `--save` option will add Hoodie to your `package.json` file as a dependency):
 
@@ -147,7 +147,7 @@ Next we will install Hoodie through npm (the `--save` option will add Hoodie to 
 $ npm install hoodie --save
 ```
 
-See the diff for my [`package.json`](https://github.com/bradley-holt/shop/commit/06e12744e90a8fcecec410f268ffbc7aad2af66b#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) file after running this command for reference. You should see a new `start` script with a value of `hoodie` and you should see `hoodie` listed under `dependencies`.
+See the [diff for my `package.json`(https://github.com/bradley-holt/shop/commit/06e12744e90a8fcecec410f268ffbc7aad2af66b#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) file] after running this command for reference. You should see a new `start` script with a value of `hoodie` and you should see `hoodie` listed under `dependencies`.
 
 Now let's test that Hoodie has been installed correctly:
 
@@ -167,7 +167,7 @@ Select and copy the `http://localhost:8080` text from the above output to your c
 
 Close the browser tab containing the Hoodie welcome screen. Back in your terminal, use `Ctrl-C` to cancel the `npm start` command and return you to the command prompt.
 
-Next you may want to add the `.hoodie` directory to your `.gitignore` file. See the diff for my [`.gitignore`](https://github.com/bradley-holt/shop/commit/f9bc49efedabfcf55d02a7d023e8949b2440bb0c#diff-a084b794bc0759e7a6b77810e01874f2) file after this step for reference. The `.hoodie` directory is automatically created by Hoodie and is where Hoodie stores app data if Hoodie is not configured to use an Apache CouchDB or IBM Cloudant backend database.
+Next you may want to add the `.hoodie` directory to your `.gitignore` file. See the [diff for my `.gitignore` file](https://github.com/bradley-holt/shop/commit/f9bc49efedabfcf55d02a7d023e8949b2440bb0c#diff-a084b794bc0759e7a6b77810e01874f2) after this step for reference. The `.hoodie` directory is automatically created by Hoodie and is where Hoodie stores app data if Hoodie is not configured to use an Apache CouchDB or IBM Cloudant backend database.
 
 Previously in this tutorial when the Shop app was served using Polymer App Toolbox (the `polymer serve` command), the Shop app was only a client app. Now that we are using Hoodie, we are going to now have a server component as well. This means that we will need to move all of our frontend code into a `public` directory that we will create.
 
@@ -219,9 +219,9 @@ Open the Hoodie URL in your web browser. You should now see the Shop app, rather
 
 Close the browser tab containing the Hoodie welcome screen. Back in your terminal, use `Ctrl-C` to cancel the `npm start` command and return you to the command prompt.
 
-Optionally, update the `README.md` file to remove outdated sections. See the diff for my [`README.md`](https://github.com/bradley-holt/shop/commit/5ccfd76db827947b59dd5034a87cabff33746569#diff-04c6e90faac2675aa89e2176d2eec7d8) file for reference on what to remove.
+Optionally, update the `README.md` file to remove outdated sections. See the [diff for my `README.md` file](https://github.com/bradley-holt/shop/commit/5ccfd76db827947b59dd5034a87cabff33746569#diff-04c6e90faac2675aa89e2176d2eec7d8) for reference on what to remove.
 
-Optionally, you may want to remove `bower_components` and `build` from your `.gitignore` file, create a new `public/.gitignore` file, and add `bower_components` and `build` to this new `.gitignore` file. See the diff for my [`.gitignore` and `public/.gitignore`](https://github.com/bradley-holt/shop/commit/bcf1c8bb06fc14fd06b74e8e1ba4dfef78375d59) files after this step for reference.
+Optionally, you may want to remove `bower_components` and `build` from your `.gitignore` file, create a new `public/.gitignore` file, and add `bower_components` and `build` to this new `.gitignore` file. See the [diff for my `.gitignore` and `public/.gitignore` files](https://github.com/bradley-holt/shop/commit/bcf1c8bb06fc14fd06b74e8e1ba4dfef78375d59) after this step for reference.
 
 **Note:** A forward slash (`/`) in a file reference indicates that the file or directory following the forward slash is within the preceding directory. For example, `public/.gitignore` means that the `.gitignore` file is within the `public` directory.
 
@@ -235,7 +235,7 @@ For convenience, set up an automated Bower install step within the npm install p
    },
 ```
 
-For reference, take a look at the diff for my  [`package.json`](https://github.com/bradley-holt/shop/commit/68a5598933be1c1fe19017c88632fcc5ca080e32#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) file after this step.
+For reference, take a look at the [diff for my `package.json` file](https://github.com/bradley-holt/shop/commit/68a5598933be1c1fe19017c88632fcc5ca080e32#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) after this step.
 
 Finally, let's test that `npm install` works correctly: 
 
@@ -247,7 +247,7 @@ $ npm install
 
 You should see only the output above and no error messages (though your output will look slightly different).
 
-Optionally, provided updated instructions in the `README.md` file. See the diff for my [`README.md`](https://github.com/bradley-holt/shop/commit/936c11bc706be425a878cf3445ed1386deea6d35#diff-04c6e90faac2675aa89e2176d2eec7d8) file for reference on what to change.
+Optionally, provided updated instructions in the `README.md` file. See the [diff for my `README.md` file](https://github.com/bradley-holt/shop/commit/936c11bc706be425a878cf3445ed1386deea6d35#diff-04c6e90faac2675aa89e2176d2eec7d8) for reference on what to change.
 
 ### Configure Hoodie&nbsp;&nbsp;🐶  ⚙
 
@@ -261,7 +261,21 @@ Setting the `adminPassword` Hoodie configuration option will allow you to login 
 }
 ```
 
-Optionally, you may want to add the `.hoodierc` file to your `.gitignore` file as `.hoodierc` is a file that you want to ensure is _not_ committed to your repository since it contains sensitive configuration values. See the diff for my [`.gitignore`](https://github.com/bradley-holt/shop/commit/a623b5d7cd6caf8749fbafd0218a5be7c2405e97#diff-a084b794bc0759e7a6b77810e01874f2) file after this step for reference.
+Start Hoodie again:
+
+```
+$ npm start
+> shop@1.1.2 start /Users/bradleydholt/shop
+> hoodie
+🐶  Your Hoodie app has started on: http://localhost:8080
+Stop server with control + c
+```
+
+Open your web browser and go to `http://localhost:8080/hoodie/admin/`. Login with the username "admin" and the password you set in `.hoodierc`. Your app currently has no users, but once a user signs up you could view or edit user accounts here in the Hoodie admin dashboard.
+
+Close the browser tab containing the Hoodie welcome screen. Back in your terminal, use `Ctrl-C` to cancel the `npm start` command and return you to the command prompt.
+
+Optionally, you may want to add the `.hoodierc` file to your `.gitignore` file as `.hoodierc` is a file that you want to ensure is _not_ committed to your repository since it contains sensitive configuration values. See the [diff for my `.gitignore` file](https://github.com/bradley-holt/shop/commit/a623b5d7cd6caf8749fbafd0218a5be7c2405e97#diff-a084b794bc0759e7a6b77810e01874f2) after this step for reference.
 
 By default Hoodie will store its data in PouchDB on the server side. This is very convenient for experimenting with Hoodie and for development. However, this is not recommended for production. Instead, use either Apache CouchDB or IBM Cloudant for production deployments. You can also Apache CouchDB, IBM Cloudant, or the [Cloudant Developer Edition](https://hub.docker.com/r/ibmcom/cloudant-developer/) for local development.
 
@@ -288,27 +302,289 @@ Sign up for an [IBM Bluemix](https://console.ng.bluemix.net/) account, if you do
 
 Once you are logged in to Bluemix, create a new Cloudant instance on the [Cloudant NoSQL DB Bluemix Catalog](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db) page. This should take you to a page representing the newly-created service instance. Click the "service credentials" link. You should have one set of service credentials listed. Click "view credentials" which should show you a JSON object containing your service credentials. Copy the value for the `url` key to your clipboard (the value will be in the form of `https://username:password@uniqueid-bluemix.cloudant.com`).
 
-Configure Hoodie to use your Cloudant instance. The easiest way to do this is by adding a `dbUrl` configuration option to your `.hoodierc` file, leaving the `.hoodierc` file looking something like (replacing `https://username:password@uniqueid-bluemix.cloudant.com` with the value you copied to your clipboard in the previous step):
+Configure Hoodie to use your Cloudant instance. The easiest way to do this is by adding a `dbUrl` configuration option to your `.hoodierc` file, leaving the `.hoodierc` file looking something like (replacing `https://username:password@uniqueid-bluemix.cloudant.com` with the value you copied to your clipboard in the previous step and adding a trailing forward slash):
 
 ```
 {
   "adminPassword": "password",
-  "dbUrl": "https://username:password@uniqueid-bluemix.cloudant.com"
+  "dbUrl": "https://username:password@uniqueid-bluemix.cloudant.com/"
 }
 ```
 
 ### Hoodie Store API&nbsp;&nbsp;🐶 🗃
 
+Now we are going to replace the use of IndexedDB within the Shop app with the Hoodie store. First we will need to create a Hoodie Polymer element that will allow us to import the Hoodie client library where needed. Create a `public/src/hoodie.html` file with the following contents ([diff](https://github.com/bradley-holt/shop/commit/bff173caa585ab57361fa804feea9973becfb907#diff-2bca5e84b618d8f088c78ed510fc5b95) for reference):
 
+```
+<dom-module id="hoodie">
+  <script src="../hoodie/client.js"></script>
+</dom-module>
+```
+
+Next we will import the Hoodie Polymer component into `public/src/shop-cart-data.html`, which is the file where shopping cart state and data is maintained. Add the following line at the end after the last `<link>` element near the top of the document:
+
+```
+<link rel="import" href="hoodie.html">
+```
+
+See the [diff for my `public/src/shop-cart-data.html` file](https://github.com/bradley-holt/shop/commit/92b8ac611d0fe92ece10130594d365b53c4043c1#diff-ca99158925a3933a2e562221dc4728e9) after this step for reference.
+
+Next you will want uninstall the `app-storage` Polymer component, which will no longer be needed:
+
+```
+$ cd public
+$ bower uninstall app-storage --save
+$ cd..
+```
+
+This should remove the reference to `app-storage` in your `public/bower.json` file. See the [diff for my `public/bower.json` file](https://github.com/bradley-holt/shop/commit/7359eaed10b816d2f249c168af77e7c72692dda0#diff-bba29d5784089997449dce418ab23149) after running this command for reference.
+
+Remove the following line from `public/src/shop-cart-data.html` which imports the `app-storage` element:
+
+```
+<link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+```
+
+Also remove the following line from `public/src/shop-cart-data.html` which does the data binding to IndexedDB for the shopping cart data :
+
+```
+    <app-localstorage-document key="shop-cart-data" data="{{cart}}"></app-localstorage-document>
+```
+
+Add the following method to `public/src/shop-cart-data.html` at line 49:
+
+```
+      observers: [
+        "_cartUpdated(cart.splices)"
+      ],
+```
+
+This sets up an [observer for array mutations](https://www.polymer-project.org/1.0/docs/devguide/observers#array-observation) of the `cart` array. This means that a method called `_cartUpdated` will be called whenever the `cart` array changes. We will create the `_cartUpdated` method in a subsequent step.
+
+Add two line breaks and add the following property:
+
+```
+      _cartDoc: {
+        _id: "cart",
+        items: [],
+      },
+```
+
+This `_cartDoc` property will serve as an in-memory representation of the cart data stored in the local PouchDB database.
+
+Add two line breaks and add the following `ready` method:
+
+```
+      ready: function() {
+        var shopCartData = this;
+        // TODO: This approach is necessarily because of hoodiehq/hoodie-client#146 (https://github.com/hoodiehq/hoodie-client/issues/146)
+        hoodie.store.db.__proto__.on("created", function(db) {
+          if ("store" == db.name) {
+            // Listen for PouchDB changes for the "cart" document
+            hoodie.store.db.changes({
+              live: true,
+              include_docs: true,
+              doc_ids: [ shopCartData._cartDoc._id ],
+              return_docs: false
+            }).on("change", function(change) {
+              var doc = change.doc;
+              // Copy document data into cart and _cartDoc
+              shopCartData.cart = doc.items;
+              shopCartData._cartDoc = doc;
+            });
+          }
+        })
+        hoodie.account.hook.after("signout", function() {
+          // Reset cart and _cartDoc
+          shopCartData.cart = [];
+          shopCartData._cartDoc = {
+            _id: "cart"
+          };
+        });
+        hoodie.store.findOrAdd(this._cartDoc).then(function(doc) {
+          if (doc) {
+            shopCartData.cart = doc.items;
+            shopCartData._cartDoc = doc;
+          }
+        });
+      },
+```
+
+This `ready` method is called automatically by Polymer when the `shop-cart-data` [component is ready](https://www.polymer-project.org/1.0/docs/devguide/registering-elements#ready-method). This method does a number of things. It sets up a listener for database changes so that the in-memory cart and corresponding user interface can be updated when the underlying database is updated, for example when synchronizing with the remote server. It resets the in-memory cart and corresponsing user interface when the user signs out. Finally, it sets up the initial in-memory cart and corresponsing user interface when the component is initially loaded.
+
+Last but not least, add the `_cartUpdated` method at line 155:
+
+
+```
+      _cartUpdated: function() {
+        if (!this._cartDoc._rev) {
+          // Skip if document is not already in Hoodie store
+          return;
+        }
+        var shopCartData = this;
+        hoodie.store.find(this._cartDoc._id).then(function(doc) {
+          // TODO: Compare cart items without using JSON.stringify
+          if (JSON.stringify(shopCartData.cart) != JSON.stringify(doc.items)) {
+            // Update Hoodie store from cart via _cartDoc
+            doc.items = shopCartData.cart;
+            return hoodie.store.update(doc);
+          }
+        }).then(function(doc) {
+          if (doc) {
+            shopCartData._cartDoc = doc;
+          }
+        });
+      }
+```
+
+This method is responsibility for updating the Hoodie store (which is a wrapper for PouchDB) whenever the cart data is updated.
+
+See the [diff for my `public/src/shop-cart-data.html` file](https://github.com/bradley-holt/shop/commit/7359eaed10b816d2f249c168af77e7c72692dda0#diff-ca99158925a3933a2e562221dc4728e9) after this step for reference on all of the changes we just made to this file.
+
+Start Hoodie again:
+
+```
+$ npm start
+> shop@1.1.2 start /Users/bradleydholt/shop
+> hoodie
+🐶  Your Hoodie app has started on: http://localhost:8080
+Stop server with control + c
+```
+
+Open your web browser and go to `http://localhost:8080` again. At this point the Shop app should appear unchanged from what we had before. Functionally, nothing has changed. However, instead of storing its data directly in IndexedDB the Shop app is now storing its data in the Hoodie store, backed by PouchDB. This sets us up for the ability to easily sync the shopping cart data with the server.
+
+Close the browser tab containing the Hoodie welcome screen. Back in your terminal, use `Ctrl-C` to cancel the `npm start` command and return you to the command prompt.
 
 ### Hoodie Account API&nbsp;&nbsp;🐶 👤
 
+Before the Shop app can sync its data with the server we first need to integrate with the Hoodie account API. This involves creating a sign up form, a sign in form, and a Hoodie account component to display the sign up form and sign in form links if the user is not signed in, and the username of the signed in user and a sign out link if the user is signed in. The sign up form, sign in form, and Hoodie account component contain quite a bit of boiler plate code so it will likely be easier to copy-and-paste this code rather than try to type it all out.
 
+Create a `public/src/shop-sign-up.html` file. See the [diff for my `public/src/shop-sign-up.html` file](https://github.com/bradley-holt/shop/commit/9574a16c876350327cf0d14c11a6c2b247d96c9c#diff-318d0be66b9e494d637d9867ed528672) for reference on what to add for the contents of this file (click "View" to get a version that you can more easily copy-and-paste from). The relevant part where this integrates with the Hoodie account API:
+
+```
+          hoodie.account.signUp({
+            username: this.$.username.value,
+            password: this.$.password.value
+          }).then(function(accountProperties) {
+            signUp.$.signUpForm.fire('iron-form-response', {
+              response: {
+                success: 1,
+                successMessage: 'Account creation successful.'
+              }
+            }, { bubbles: false });
+            signUp._pushState('success');
+          }).catch(function(error) {
+            signUp.$.signUpForm.fire('iron-form-response', {
+              response: {
+                success: 0,
+                errorMessage: 'Account creation failed.'
+              }
+            }, { bubbles: false });
+            signUp._pushState('error');
+          }).then(function() {
+            signUp._reset();
+          });
+```
+
+Create a `public/src/shop-sign-in.html` file. See the [diff for my `public/src/shop-sign-in.html` file](https://github.com/bradley-holt/shop/commit/9574a16c876350327cf0d14c11a6c2b247d96c9c#diff-01c8a019e2e35093754f872b3e15fd5a) for reference on what to add for the contents of this file (click "View" to get a version that you can more easily copy-and-paste from). The relevant part where this integrates with the Hoodie account API:
+
+```
+          hoodie.account.signIn({
+            username: this.$.username.value,
+            password: this.$.password.value
+          }).then(function(accountProperties) {
+            signIn.$.signInForm.fire('iron-form-response', {
+              response: {
+                success: 1,
+                successMessage: 'Account sign in successful.'
+              }
+            }, { bubbles: false });
+            signIn._pushState('success');
+          }).catch(function(error) {
+            signIn.$.signInForm.fire('iron-form-response', {
+              response: {
+                success: 0,
+                errorMessage: 'Account sign in failed.'
+              }
+            }, { bubbles: false });
+            signIn._pushState('error');
+          }).then(function() {
+            signIn._reset();
+          });
+```
+
+Next we need to add the sign up form and sign in form as components and routes within the Shop app. Add the following after line 313 of `public/src/shop-app.html`:
+
+```
+      <!-- sign-up view -->
+      <shop-sign-up name="sign-up" route="{{subroute}}"></shop-sign-up>
+      <!-- sign-in view -->
+      <shop-sign-in name="sign-in" route="{{subroute}}"></shop-sign-in>
+```
+
+See the [diff for my `public/src/shop-app.html` file](https://github.com/bradley-holt/shop/commit/244d744c4b729ef6c0e8c4dde6cb22faa394fe74#diff-539d9b3d2e6eca52c00fd5c8344f84bb) after this step for reference.
+
+Next create a `public/src/hoodie-account.html` which will serve as our Hoodie account component. See the [diff for my `public/src/hoodie-account.html` file](https://github.com/bradley-holt/shop/commit/920a624821a442bf31c41a5f8b8000b660f1ff41#diff-e972bc38b890fc860a8929871916456f) for reference on what to add for the contents of this file (click "View" to get a version that you can more easily copy-and-paste from).
+
+Finally, we need to add the Hoodie account component to the Shop app. Open the `public/src/shop-app.html` file and add the following after line 23 to import the Hoodie account component:
+
+```
+<link rel="import" href="hoodie-account.html">
+```
+
+Also in the `public/src/shop-app.html` file, add the following after line 267 to use the Hoodie account component:
+
+```
+<hoodie-account></hoodie-account>
+```
+
+See the [diff for my `public/src/shop-app.html` file](https://github.com/bradley-holt/shop/commit/fc94adc90476f74c8301bd1bce34b58854d7f814#diff-539d9b3d2e6eca52c00fd5c8344f84bb) after this step for reference on the changes we just made to this file.
 
 ### Offline Sync&nbsp;&nbsp;🐶 🔄
 
+Guess what? You now have offline sync capabilities! For signed in users, data in the Hoodie store is synchronized live with the server automatically, cleared on sign out, and available to the user again after sign in. Try it for yourself.
 
+Start Hoodie again:
+
+```
+$ npm start
+> shop@1.1.2 start /Users/bradleydholt/shop
+> hoodie
+🐶  Your Hoodie app has started on: http://localhost:8080
+Stop server with control + c
+```
+
+Open your web browser and go to `http://localhost:8080` again. You should now see "Sign Up" and "Sign In" links at the top of the page. Click "Sign Up" and choose a username and password. Then proceed to the "Sign In" form and enter the same username and password. Browse the shop and add some items to your shopping cart. Take note of the items and quantities in your cart. Click the "Sign Out" link. Your cart should now be empty. Click the "Sign In" link and enter your username and password again. Once you are signed in, your cart data should reappear as it was synchronized to the server while you were signed in, cleared from your local browser when you signed out, and re-synchronized to your client when you signed in again.
+
+Close the browser tab containing the Hoodie welcome screen. Back in your terminal, use `Ctrl-C` to cancel the `npm start` command and return you to the command prompt.
 
 ### What's next?&nbsp;&nbsp;🤔
 
+There are number of potential directions you could go with the Shop app from here:
+
+* There is a bug with the reading changes and synchronizing cart data _from_ the server that needs to be fixed.
+* Adding app-specific conflict resolution strategy is the next most obvious improvement. This is relatively easy to add to the changes listener. For this app, simply merging shopping cart items would be one potential conflict resolution strategy.
+* Use Apache CouchDB or the [Cloudant Developer Edition](https://hub.docker.com/r/ibmcom/cloudant-developer/) for local development, if you are not already.
+* The Polymer build system is currently broken in this setup and should be fixed.
+* Once Polymer builds are fixed, this app could be configured to deploy to IBM Bluemix and use IBM Cloudant.
+* Consider separating the backend and frontend application codebases, rather than having both in one shared codebase.
+
+#### Get Involved in the Offline First Community!
+
+* [Join the Offline First Slack team.](http://offlinefirst.org/chat/)
+* Follow @[OfflineCamp](https://twitter.com/OfflineCamp) on Twitter.
+* Read the [Offline Camp Medium publication](https://medium.com/offline-camp).
+* [Join us at an upcoming Offline Camp, or let us know where you'd like us to take Offline Camp next.](http://offlinefirst.org/camp/)
+
+#### Further Reading and Resources
+
+* [Offline Sync for Progressive Web Apps – IBM Watson Data Lab](https://medium.com/ibm-watson-data-lab/offline-sync-for-progressive-web-apps-ccab6bf6db17)
+* [Voice of InterConnect – IBM Watson Data Lab](https://medium.com/ibm-watson-data-lab/voice-of-interconnect-112d5036dabc)
+* [Deploying the Hoodie Tracker demo app to IBM Bluemix](https://github.com/hoodiehq/hoodie-app-tracker/blob/master/deployment.md#deploy-with-bluemix)
+* [Hoodie documentation on storing data with IBM Cloudant](http://docs.hood.ie/en/latest/guides/deployment.html#store-data-with-cloudant)
+* [Offline Camp Medium publication](https://medium.com/offline-camp)
+* [Offline First resources](https://medium.com/offline-camp/offline-first-resources-2acc5836e9d4)
+* [Offline First on YouTube](https://www.youtube.com/OfflineFirst)
+* [Make&Model](http://makemodel.co/) (consultancy specializing in user experience design for Offline First apps)
+* [Neighbourhoodie Software](http://neighbourhood.ie/) (IBM Business Partner specializing in architecting Offline First apps)
 
