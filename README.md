@@ -167,7 +167,7 @@ Next we will install Hoodie through npm (the `--save` option will add Hoodie to 
 $ npm install hoodie --save
 ```
 
-See the [diff for my `package.json`(https://github.com/bradley-holt/shop/commit/06e12744e90a8fcecec410f268ffbc7aad2af66b#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) file] after running this command for reference. You should see a new `start` script with a value of `hoodie` and you should see `hoodie` listed under `dependencies`.
+See the [diff for my `package.json` file](https://github.com/bradley-holt/shop/commit/06e12744e90a8fcecec410f268ffbc7aad2af66b#diff-b9cfc7f2cdf78a7f4b91a753d10865a2) after running this command for reference. You should see a new `start` script with a value of `hoodie` and you should see `hoodie` listed under `dependencies`.
 
 Now let's test that Hoodie has been installed correctly:
 
