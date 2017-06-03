@@ -331,6 +331,60 @@ Configure Hoodie to use your Cloudant instance. The easiest way to do this is by
 }
 ```
 
+##### Cloudant Developer Edition
+
+**Warning:** There is a known issue with using the Cloudant Developer Edition with Hoodie. I am looking into how to resolve this issue.
+
+Download and install [Docker](https://www.docker.com/) (version 1.9 or above is recommended). Once Docker is installed, download the [Cloudant Developer Edition](https://hub.docker.com/r/ibmcom/cloudant-developer/) from Docker Hub (this is a fairly large image, so the download may take some time):
+
+```
+$ docker pull ibmcom/cloudant-developer
+```
+
+Start the Docker container:
+
+```
+docker run --detach --volume cloudant:/srv --name cloudant-developer --publish 8082:80 --hostname cloudant.dev ibmcom/cloudant-developer
+```
+
+**Note:** The documentation for the Cloudant Developer Edition instructs forwarding to port `8080`. However, this would conflict with the port on which we are running the Hoodie Node.js app. The instructions here deviate from the Cloudant Developer Edition instructions and instead forward to port `8082`.
+
+Configure Hoodie to use your Cloudant instance. The easiest way to do this is by adding a `dbUrl` configuration option to your `.hoodierc` file, leaving the `.hoodierc` file looking something like:
+
+```
+{
+  "adminPassword": "password",
+  "dbUrl": "http://admin:pass@localhost:8082/"
+}
+```
+
+**Note:** Instructions are available on the [Cloudant Developer Edition](https://hub.docker.com/r/ibmcom/cloudant-developer/) for starting the container via Docker Compose.
+
+If you want to stop the Docker container, first list the containers:
+
+```
+$ docker ps --all
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                  NAMES
+1b4030e0f6b6        ibmcom/cloudant-developer   "supervisord -c /e..."   About an hour ago   Up 2 minutes        0.0.0.0:8082->80/tcp   cloudant
+```
+
+**Note:** Your output will appear different than the example above.
+
+Find the container ID corresponding to the `ibmcom/cloudant-developer` image and run the following command to stop the container (replacing the container ID with your container ID):
+
+```
+$ docker stop 1b4030e0f6b6
+1b4030e0f6b6
+```
+
+To start the container again run (replacing the container ID with your container ID):
+
+```
+$ docker start 1b4030e0f6b6
+1b4030e0f6b6
+
+```
+
 ### Hoodie Store API&nbsp;&nbsp;🐶 🗃
 
 Now we are going to replace the use of IndexedDB within the Shop app with the Hoodie store. First we will need to create a Hoodie Polymer element that will allow us to import the Hoodie client library where needed. Create a `public/src/hoodie.html` file with the following contents ([diff](https://github.com/bradley-holt/shop/commit/bff173caa585ab57361fa804feea9973becfb907#diff-2bca5e84b618d8f088c78ed510fc5b95) for reference):
