@@ -408,7 +408,7 @@ Next you will want uninstall the `app-storage` Polymer component, which will no 
 ```
 $ cd public
 $ bower uninstall app-storage --save
-$ cd..
+$ cd ..
 ```
 
 This should remove the reference to `app-storage` in your `public/bower.json` file. See the [diff for my `public/bower.json` file](https://github.com/bradley-holt/shop/commit/7359eaed10b816d2f249c168af77e7c72692dda0#diff-bba29d5784089997449dce418ab23149) after running this command for reference.
