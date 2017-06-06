@@ -271,7 +271,7 @@ Optionally, provided updated instructions in the `README.md` file. See the [diff
 
 ### Configure Hoodie&nbsp;&nbsp;🐶  ⚙
 
-Hoodie can be configured through command line arguments, environment variables, a `.hoodierc` file, and/or a `hoodie` key in `package.json`. See the [configuration section of the Hoodie documentation](http://docs.hood.ie/en/latest/guides/configuration.html) for a full list of Hoodie configuration options.
+Hoodie can be configured through command line arguments, environment variables, a `shop/.hoodierc` file, and/or a `hoodie` key in `package.json`. See the [configuration section of the Hoodie documentation](http://docs.hood.ie/en/latest/guides/configuration.html) for a full list of Hoodie configuration options.
 
 Setting the `adminPassword` Hoodie configuration option will allow you to login to the Hoodie admin dashboard where you can create, view, and edit user accounts. Create a `.hoodierc` file and add the following contents using your text editor (changing `password` to any value you would like to use for a password):
 
